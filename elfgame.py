@@ -8,7 +8,7 @@ class ElfGame:
         if weather <= 4:
             weather = "sunny"
         else:
-            weather = "blizard"
+            weather = "blizzard"
         sg.theme("GrayGrayGray")
         sg.popup(f"Today's weather is {weather}")
         return weather
@@ -122,36 +122,28 @@ class ElfGame:
         sg.theme('GrayGrayGray')
         layout = [[sg.Text('Elf Game', size=(20,1), justification='center', font='Helvetica 20')],
                 [sg.Text(f"An Elf costs £75 each, currently you have £{money} and {elftotal} elves", justification='center')],
-                [sg.Text('Amount of elves'), sg.InputText('', key = '-EN-')],
+                [sg.Text('Amount of elves'), sg.Slider(range=(0, (money//75)), default_value=0, size=(20, 10), orientation="h", key="-EN-")],
                 [sg.Button('Submit'), sg.Button('Exit')]]
 
         window = sg.Window('ElfGame', layout)
         while True:
             event, values = window.read()
             if event == sg.WINDOW_CLOSED:
-                break
+                window.close()
+                return(money, elftotal)
             elif event == 'Submit':
                 elfnum = values['-EN-']
-                if elfnum.isdigit() == False:
-                    sg.popup('Please input a number')
+                elfnum = int(elfnum)
+                money = int(money)
+                if (elfnum * 75) > money:
+                    sg.popup('You do not have enough money')
                     window.close()
                     self.buyelf(money, elftotal)
                 else:
-                    if elfnum == '':
-                        sg.popup('Please input a number')
-                        window.close()
-                        self.buyelf(money, elftotal)
-                    elfnum = int(elfnum)
-                    money = int(money)
-                    if (elfnum * 75) > money:
-                        sg.popup('You do not have enough money')
-                        window.close()
-                        self.buyelf(money, elftotal)
-                    else:
-                        window.close()
-                        money = money - (elfnum * 75)
-                        elftotal += elfnum
-                        return money, elftotal
+                    window.close()
+                    money = money - (elfnum * 75)
+                    elftotal += elfnum
+                    return (money, elftotal)
                     
     def Strike(self,daynumber,elftotal,money):
         sg.theme('GrayGrayGray')
@@ -184,9 +176,7 @@ class ElfGame:
                 self.daycalculator(9,elftotal,money)
         else:
             self.daycalculator(8,elftotal,money)
-
             
-                
     def taxMan(self,money): 
         sg.theme('GrayGrayGray')
         layout = [[sg.Text('Elf Game', size=(30,1), justification='center', font='Helvetica 20')],
@@ -253,7 +243,6 @@ class ElfGame:
                         moneywon = 0
                         return moneywon
                 
-    
     def main(self):
         sg.theme('GrayGrayGray')
         layout = [[sg.Text('Elf Game', size=(20,1), justification='center', font='Helvetica 20')],
@@ -267,7 +256,7 @@ class ElfGame:
                 break
             if event == 'Play':
                 window.close()
-                self.daycalculator(0,12,0)
+                self.daycalculator(20,12,11110)
 
 
         window.close()
