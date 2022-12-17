@@ -9,7 +9,7 @@ class ElfGame:
             weather = "sunny"
         else:
             weather = "blizzard"
-        sg.theme("GrayGrayGray")
+        sg.theme("DarkGreen1")
         sg.popup(f"Today's weather is {weather}")
         return weather
 
@@ -18,7 +18,7 @@ class ElfGame:
             money = 0
         else:
             None
-        sg.theme('GrayGrayGray')
+        sg.theme('DarkGreen1')
         layout = [[sg.Text('Elf Game', size=(30,1), justification='center', font='Helvetica 20')],
                 [sg.Text(f'Day: {daynumber}, Elf Total: {elftotal}, Money: £{money}', size=(30,1), justification='center', font='Helvetica 20')],
                 [sg.Text('Nearby Woods', size=(15,1), justification='center'), sg.InputText('', key = '-NW-', size=(15,1) , font='Helvetica 20')],
@@ -119,7 +119,7 @@ class ElfGame:
             self.first17days(money,elftotal,daynumber,True,True)
 
     def buyelf(self, money, elftotal):
-        sg.theme('GrayGrayGray')
+        sg.theme('DarkGreen1')
         layout = [[sg.Text('Elf Game', size=(20,1), justification='center', font='Helvetica 20')],
                 [sg.Text(f"An Elf costs £75 each, currently you have £{money} and {elftotal} elves", justification='center')],
                 [sg.Text('Amount of elves'), sg.Slider(range=(0, (money//75)), default_value=0, size=(20, 10), orientation="h", key="-EN-")],
@@ -146,7 +146,7 @@ class ElfGame:
                     return (money, elftotal)
                     
     def Strike(self,daynumber,elftotal,money):
-        sg.theme('GrayGrayGray')
+        sg.theme('DarkGreen1')
         layout = [[sg.Text('Elf Game', size=(30,1), justification='center', font='Helvetica 20')],
                 [sg.Text('Do you want to give your elves a day off?', size=(60,1), justification='center', font='Helvetica 10')],
                 [sg.Text('If you do give them a day off they will be happy', size=(60,1), justification='center', font='Helvetica 10')],
@@ -173,12 +173,12 @@ class ElfGame:
                 self.daycalculator((daynumber+1),elftotal,money)
             else:
                 sg.popup("The Elves have chosen not to strike")
-                self.daycalculator(9,elftotal,money)
+                self.first17days(money,elftotal,8,True,True)
         else:
             self.daycalculator(8,elftotal,money)
             
     def taxMan(self,money): 
-        sg.theme('GrayGrayGray')
+        sg.theme('DarkGreen1')
         layout = [[sg.Text('Elf Game', size=(30,1), justification='center', font='Helvetica 20')],
                 [sg.Text('Do you want to pay the tax man?', size=(60,1), justification='center', font='Helvetica 10')],
                 [sg.Text('If you do he will take 10% of your money ', size=(60,1), justification='center', font='Helvetica 10')],
@@ -213,7 +213,7 @@ class ElfGame:
         return money 
 
     def lottery(self):
-        sg.theme('GrayGrayGray')
+        sg.theme('DarkGreen1')
         layout = [[sg.Text('Elf Game', size=(20,1), justification='center', font='Helvetica 20')],
                 [sg.Text('Enter a number between 1 and 10 for the lottery'), sg.InputText('', key = '-EN-')],
                 [sg.Button('Submit')]]
@@ -244,7 +244,7 @@ class ElfGame:
                         return moneywon
                 
     def main(self):
-        sg.theme('GrayGrayGray')
+        sg.theme('DarkGreen1')
         layout = [[sg.Text('Elf Game', size=(20,1), justification='center', font='Helvetica 20')],
                 [sg.Text('                           '),sg.Button('Play'), sg.Button('Exit')]]
 
@@ -256,11 +256,11 @@ class ElfGame:
                 break
             if event == 'Play':
                 window.close()
-                self.daycalculator(20,12,11110)
+                self.daycalculator(0,12,0)
 
 
         window.close()
-    
+
 elfgame = ElfGame()
 elfgame.main()
 
