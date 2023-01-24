@@ -14,4 +14,4 @@ The ‘Big Mountain Pass’ is now complete, this gives you the opportunity to s
 All the games requirements are contained in the requirements folder. Please install them using the following command: 
 `$ pip install -r requirements.txt`
 ### Starting the game
-To start the same simply run the python file wiht `$ python3 elfgame.py`
+To start the same simply run 'elf game.exe' file
