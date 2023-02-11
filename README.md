@@ -10,8 +10,5 @@ Each day you must choose whether to send your elves to the ‘Nearby Woods’ wh
 The ‘Big Mountain Pass’ is now complete, this gives you the opportunity to send your elves to the ‘Forest Far Beyond’, trees here are so big and beautiful they are worth £50.  So now you have the opportunity to send elves to the ‘Nearby Woods’, the ‘Faraway Forest’ and the ‘Forest Far Beyond’.  Take care though if you send your elves to the ‘Forest Far Beyond’ and there is a blizzard you will lose those elves. Fear not you can buy them back but at a premium!
 
 ## Running the game
-### Requirements
-All the games requirements are contained in the requirements folder. Please install them using the following command: 
-`$ pip install -r requirements.txt`
 ### Starting the game
-To start the same simply run 'elf game.exe' file
+To start the same simply run `elf game.exe` file
