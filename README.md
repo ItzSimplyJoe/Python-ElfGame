@@ -1,6 +1,5 @@
 # Elf Game 🧝🎄
 ![python image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![html image]
 ## Game outline
 Your are in charge of a Christmas tree business, you have 12 elves that work for you cutting down trees and bringing them back for sale. You have the 25 days of advent to make the biggest profit.
 
