@@ -12,3 +12,14 @@ The ‘Big Mountain Pass’ is now complete, this gives you the opportunity to s
 ## Running the game
 ### Starting the game
 To start the same simply run `elf game.exe` file
+
+## Contribution Guidelines
+If you would like to contribute to this project, please follow these guidelines:
+
+Fork the repository and make your changes on a new branch.
+Submit a pull request to have your changes reviewed and merged into the main branch.
+Please ensure that your code is well-documented and follows best practices for Python programming.
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+If you have any questions or encounter any issues with this project, please feel free to create an issue on GitHub. Thank you for playing Python ElfGame!
