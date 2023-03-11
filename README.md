@@ -1,7 +1,7 @@
 # Elf Game 🧝🎄
 ![python image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ## Game outline
-Your are in charge of a Christmas tree business, you have 12 elves that work for you cutting down trees and bringing them back for sale. You have the 25 days of advent to make the biggest profit.
+You are in charge of a Christmas tree business, you have 12 elves that work for you cutting down trees and bringing them back for sale. You have the 25 days of advent to make the biggest profit.
 
 ### Days 1 - 17 
 Each day you must choose whether to send your elves to the ‘Nearby Woods’ where trees are worth £10 or the ‘Faraway Forest’ where trees are worth £20.  However, elves will not be able to get to the ‘Faraway Forest’ if there is a blizzard and therefore bring no trees back.  There is a 1/3 chance of there being a blizzard. 
